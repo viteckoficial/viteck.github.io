@@ -1,195 +1,224 @@
-body{
-	width: 100%;
-	height: 100%;
-	font-family: sans-serif;
-	background-color: #424242;
-	letter-spacing: 0.03em;
-	line-height: 1.6;
-}
-*{
-	box-sizing: border-box;
-	margin:0;
-	padding:0;
-}
-ul{
-	list-style: none;
-}
-a{
-	text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo2', sans-serif;
 }
 
-.container{
-	max-width: 1170px;
-	margin:auto;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-}
-.align-items-center{
-	align-items: center;
-}
-.justify-content-between{
-	justify-content: space-between;
-}
-/*header*/
-.header{
-	background-color: #212121;
-	padding: 12px 0;
-	line-height: 1.5;
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #ffff;
 }
 
-.header .logo,
-.header .nav{
-	padding:0 15px;
-}
-.header .logo a{
-	font-size: 30px;
-	color: #ffffff;
-	text-transform: capitalize;
-}
-.header .nav ul li{
-	display: inline-block;
-	margin-left: 40px;
-}
-.header .nav ul li a{
-	display: block;
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	padding: 10px 0;
-	transition: all 0.5s ease;
-}
-.header .nav ul li a.active,
-.header .nav ul li a:hover{
-	color: #651FFF;
-}
-.nav-toggler{
-	height: 34px;
-	width: 44px;
-	background-color: #ffffff;
-	border-radius: 4px;
-	cursor: pointer;
-	border:none;
-	display: none;
-	margin-right: 15px;
-}
-.nav-toggler:focus{
-	outline: none;
-	box-shadow: 0 0 15px rgba(255,255,255,0.5);
-}
-.nav-toggler span{
-    height: 2px;
-    width: 20px;
-    background-color: #212121;
-    display: block;
-    margin:auto;
-    position: relative;
-    transition: all 0.3s ease;
-}
-.nav-toggler.active span{
-	background-color: transparent;
-}
-.nav-toggler span::before,
-.nav-toggler span::after{
-	content: '';
-	position: absolute;
-	left:0;
-	top:0;
-	width: 100%;
-	height: 100%;
-	background-color: #212121;
-	transition: all 0.3s ease;
-}
-.nav-toggler span::before{
-	transform: translateY(-6px);
-}
-.nav-toggler.active span::before{
-	transform: rotate(45deg);
-}
-.nav-toggler span::after{
-	transform: translateY(6px);
-}
-.nav-toggler.active span::after{
-	transform: rotate(135deg);
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #ffff;
 }
 
-/* Cards */
+h4 {
+    font-size: 20px;
+    color: #ffff;
+}
 
-.containerPortada{
-	width: 100%;
-	max-width: 1200px;
-	height: 430px;
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    margin-top: 300px;
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #212121;
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7);;
+    z-index: 999;
+    position: sticky;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+    background-color: #323232;
+}
+
+/* Header Start */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #212121;
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7);;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Inicio NavBar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+}
+
+#navbar li a:hover {
+    color: #14FFEC;
+}
+
+/* Inicio Cards */
+
+#card {
+    width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: auto;
+    margin-top: 40px;
 }
 
-.containerPortada .card{
-	width: 330px;
-	height: 290px;
-	border-radius: 8px;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-	margin: 20px;
-	text-align: center;
-	transition: all 0.25s;
-	background-color: #212121;
+#card .card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 1);
 }
 
-.containerPortada .card:hover{
-	transform: translateY(-5px);
-	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+#card .card-box {
+    min-width: 330px;
+    height: 220px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("imagenes/portadas/portada_palo_alto.jpg");
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 1);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    align-items: center;
+    transition: all 0.25s;
 }
 
-.containerPortada .card img{
-	width: 330px;
-	height: 220px;
+#card .card-box2 {
+    background-image: url("imagenes/portadas/portada_wolf.jpg");
 }
 
-.containerPortada .card h4{
-	font-weight: 600;
+#card .card-box3 {
+    background-image: url("imagenes/portadas/portada_makeba.jpg");
 }
 
-.containerPortada .card p{
-	padding: 0 1rem;
-	font-size: 16px;
-	font-weight: 300;
-	color: #ffffff;
+#card .card-box4 {
+    background-image: url("imagenes/portadas/portada_hush.jpg");
 }
 
-.containerPortada .card a{
-	font-size: 14px;
-	font-weight: 500;
-	text-decoration:  none;
-	color: #747474;
+#card .card-box5 {
+    background-image: url("imagenes/portadas/portada_base.jpg");
 }
 
-@media(max-width:991px){
-   .nav-toggler{
-   	display: block;
-   }
-   .header .nav{
-   	width: 100%;
-   	padding:0;
-   	max-height: 0px;
-   	overflow: hidden;
-   	visibility: hidden;
-   	transition: all 0.5s ease;
-   }
-   .header .nav.open{
-   	visibility: visible;
-   }
-   .header .nav ul{
-   	padding:12px 15px 0;
-   	margin-top: 12px;
-   	border-top:1px solid rgba(255,255,255,0.2);
-   }
-   .header .nav ul li{
-   	display: block;
-   	margin:0;
-   }
+#card .card-box6 {
+    background-image: url("imagenes/portadas/portada_templo.jpg");
 }
 
+.PaloAlto {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
 
+.Wolf {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.Makeba {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.Hush {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.Base1 {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.ElTemplo {
+    position: absolute;
+    bottom: 0px;
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Inicio Page */
+
+
+/* Eventos Page */
+
+
+/* Sobre bosotros Page */
