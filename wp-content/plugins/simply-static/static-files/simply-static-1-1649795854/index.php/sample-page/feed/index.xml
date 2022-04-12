@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments on: Sample Page	</title>
-	<atom:link href="/https://viteckoficial.github.io/index.php/sample-page/feed/" rel="self" type="application/rss+xml" />
-	<link>/https://viteckoficial.github.io</link>
+	<atom:link href="https://viteckoficial.github.io/index.php/sample-page/feed/" rel="self" type="application/rss+xml" />
+	<link>https://viteckoficial.github.io</link>
 	<description>Just another WordPress site</description>
 	<lastBuildDate>Tue, 12 Apr 2022 19:24:57 +0000</lastBuildDate>
 	<sy:updatePeriod>

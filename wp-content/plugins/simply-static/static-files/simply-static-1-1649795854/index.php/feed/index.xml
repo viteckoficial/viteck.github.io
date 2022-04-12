@@ -9,8 +9,8 @@
 
 <channel>
 	<title>viteckoficial-card-info</title>
-	<atom:link href="/https://viteckoficial.github.io/index.php/feed/" rel="self" type="application/rss+xml" />
-	<link>/https://viteckoficial.github.io</link>
+	<atom:link href="https://viteckoficial.github.io/index.php/feed/" rel="self" type="application/rss+xml" />
+	<link>https://viteckoficial.github.io</link>
 	<description>Just another WordPress site</description>
 	<lastBuildDate>Tue, 12 Apr 2022 19:24:57 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -21,20 +21,20 @@
 	<generator>https://wordpress.org/?v=5.9.3</generator>
 	<item>
 		<title>Hello world!</title>
-		<link>/https://viteckoficial.github.io/index.php/2022/04/12/hello-world/</link>
-					<comments>/https://viteckoficial.github.io/index.php/2022/04/12/hello-world/#comments</comments>
+		<link>https://viteckoficial.github.io/index.php/2022/04/12/hello-world/</link>
+					<comments>https://viteckoficial.github.io/index.php/2022/04/12/hello-world/#comments</comments>
 		
 		<dc:creator><![CDATA[viteckoficial@gmail.com]]></dc:creator>
 		<pubDate>Tue, 12 Apr 2022 19:24:57 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
-		<guid isPermaLink="false">/https://viteckoficial.github.io/?p=1</guid>
+		<guid isPermaLink="false">https://viteckoficial.github.io/?p=1</guid>
 
 					<description><![CDATA[Welcome to WordPress. This is your first post. Edit or delete it, then start writing!]]></description>
 										<content:encoded><![CDATA[
 <p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/https://viteckoficial.github.io/index.php/2022/04/12/hello-world/feed/</wfw:commentRss>
+					<wfw:commentRss>https://viteckoficial.github.io/index.php/2022/04/12/hello-world/feed/</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
