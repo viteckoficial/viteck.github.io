@@ -1,0 +1,64 @@
+2022-04-24T02:34:14+00:00 CRITICAL Uncaught Requests_Exception_HTTP_403: 403 Forbidden in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php:133
+Stack trace:
+#0 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php(151): Elementor\Core\Frontend\Render_Mode_Manager->add_current_actions()
+#1 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\includes\frontend.php(192): Elementor\Core\Frontend\Render_Mode_Manager->__construct()
+#2 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(307): Elementor\Frontend->init_render_mode('')
+#3 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\viteckoficial\wp-includes\template-loader.php(13): do_action('template_redire...')
+#6 C:\xampp\htdocs\viteckoficial\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\viteckoficial\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php on line 133
+
+2022-04-24T02:34:25+00:00 CRITICAL Uncaught Requests_Exception_HTTP_403: 403 Forbidden in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php:133
+Stack trace:
+#0 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php(151): Elementor\Core\Frontend\Render_Mode_Manager->add_current_actions()
+#1 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\includes\frontend.php(192): Elementor\Core\Frontend\Render_Mode_Manager->__construct()
+#2 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(307): Elementor\Frontend->init_render_mode('')
+#3 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\viteckoficial\wp-includes\template-loader.php(13): do_action('template_redire...')
+#6 C:\xampp\htdocs\viteckoficial\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\viteckoficial\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\frontend\render-mode-manager.php on line 133
+
+2022-04-24T04:11:55+00:00 CRITICAL Uncaught Exception:  is an invalid version. in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\utils\version.php:94
+Stack trace:
+#0 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\modules\compatibility-tag\base-module.php(69): Elementor\Core\Utils\Version::create_from_string(NULL)
+#1 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\modules\compatibility-tag\base-module.php(133): Elementor\Modules\CompatibilityTag\Base_Module->on_plugin_update_message(Array)
+#2 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(309): Elementor\Modules\CompatibilityTag\Base_Module->Elementor\Modules\CompatibilityTag\{closure}(Array)
+#3 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\viteckoficial\wp-admin\includes\update.php(581): do_action('in_plugin_updat...', Array, Object(stdClass))
+#6 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(309): wp_plugin_update_row('elementor-pro/e...', Array)
+#7 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-plugins-list-table.php(1359): do_action('after_plugin_ro...', 'elementor-pro/e...', Array, 'all')
+#10 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-plugins-list-table.php(697): WP_Plugins_List_Table->single_row(Array)
+#11 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-list-table.php(1362): WP_Plugins_List_Table->display_rows()
+#12 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-list-table.php(1289): WP_List_Table->display_rows_or_placeholder()
+#13 C:\xampp\htdocs\viteckoficial\wp-admin\plugins.php(773): WP_List_Table->display()
+#14 {main}
+  thrown in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\utils\version.php on line 94
+
+2022-04-24T04:13:30+00:00 CRITICAL Uncaught Exception:  is an invalid version. in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\utils\version.php:94
+Stack trace:
+#0 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\modules\compatibility-tag\base-module.php(69): Elementor\Core\Utils\Version::create_from_string(NULL)
+#1 C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\modules\compatibility-tag\base-module.php(133): Elementor\Modules\CompatibilityTag\Base_Module->on_plugin_update_message(Array)
+#2 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(309): Elementor\Modules\CompatibilityTag\Base_Module->Elementor\Modules\CompatibilityTag\{closure}(Array)
+#3 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\viteckoficial\wp-admin\includes\update.php(581): do_action('in_plugin_updat...', Array, Object(stdClass))
+#6 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(309): wp_plugin_update_row('elementor-pro/e...', Array)
+#7 C:\xampp\htdocs\viteckoficial\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\viteckoficial\wp-includes\plugin.php(474): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-plugins-list-table.php(1359): do_action('after_plugin_ro...', 'elementor-pro/e...', Array, 'all')
+#10 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-plugins-list-table.php(697): WP_Plugins_List_Table->single_row(Array)
+#11 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-list-table.php(1362): WP_Plugins_List_Table->display_rows()
+#12 C:\xampp\htdocs\viteckoficial\wp-admin\includes\class-wp-list-table.php(1289): WP_List_Table->display_rows_or_placeholder()
+#13 C:\xampp\htdocs\viteckoficial\wp-admin\plugins.php(773): WP_List_Table->display()
+#14 {main}
+  thrown in C:\xampp\htdocs\viteckoficial\wp-content\plugins\elementor\core\utils\version.php on line 94
+
