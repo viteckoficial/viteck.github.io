@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Elementor Pro - Bigmasterweb.com
+ * Plugin Name: Elementor Pro
  * Description: Elevate your designs and unlock the full power of Elementor. Gain access to dozens of Pro widgets and kits, Theme Builder, Pop Ups, Forms and WooCommerce building capabilities.
- * Plugin URI: https://elementor.com/
+ * Plugin URI: https://go.elementor.com/wp-dash-wp-plugins-author-uri/
+ * Secret Key: 83a5bb0e2ad5164690bc7a42ae592cf5
  * Author: Elementor.com
- * Version: 3.3.8
- * Elementor tested up to: 3.4.0
- * Author URI: https://elementor.com/
- *
+ * Version: 3.6.5
+ * Elementor tested up to: 3.6.0
+ * Author URI: https://go.elementor.com/wp-dash-wp-plugins-author-uri/
  * Text Domain: elementor-pro
  */
 
@@ -16,30 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 update_option( 'elementor_pro_license_key', 'activated' );
-update_option( '_elementor_pro_license_data', [ 'timeout' => strtotime( '+12 hours', current_time( 'timestamp' ) ), 'value' => json_encode( [ 'license' => 'valid', 'expires' => '01.01.2030' ] ) ] );
-add_filter( 'elementor/connect/additional-connect-info', '__return_empty_array', 999 );
+set_transient( 'elementor_pro_license_data', [ 
+	'license' => 'valid', 
+	'expires' => $date = date('M d, Y', strtotime('+1 years')) ] );
+set_transient( 'timeout_elementor_pro_license_data', 36001040400 );
 
-add_action( 'init', function() {
-	add_filter( 'pre_http_request', function( $pre, $parsed_args, $url ) {
-		if ( strpos( $url, 'my.elementor.com/api/v1/licenses' ) !== false ) {
-			return [
-				'response' => [ 'code' => 200, 'message' => 'ÎÊ' ],
-				'body'     => json_encode( [ 'license' => 'valid', 'expires' => '01.01.2030' ] )
-			];
-		} elseif ( strpos( $url, 'my.elementor.com/api/connect/v1/library/get_template_content' ) !== false ) {
-			$response = wp_remote_get( "http://wordpressnull.org/elementor/templates/{$parsed_args['body']['id']}.json", [ 'sslverify' => false, 'timeout' => 25 ] );
-			if ( wp_remote_retrieve_response_code( $response ) == 200 ) {
-				return $response;
-			} else {
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}, 10, 3 );
-} );
-
-define( 'ELEMENTOR_PRO_VERSION', '3.3.8' );
+define( 'ELEMENTOR_PRO_VERSION', '3.6.5' );
 
 define( 'ELEMENTOR_PRO__FILE__', __FILE__ );
 define( 'ELEMENTOR_PRO_PLUGIN_BASE', plugin_basename( ELEMENTOR_PRO__FILE__ ) );
@@ -66,14 +48,14 @@ function elementor_pro_load_plugin() {
 		return;
 	}
 
-	$elementor_version_required = '3.3.0';
+	$elementor_version_required = '3.5.0';
 	if ( ! version_compare( ELEMENTOR_VERSION, $elementor_version_required, '>=' ) ) {
 		add_action( 'admin_notices', 'elementor_pro_fail_load_out_of_date' );
 
 		return;
 	}
 
-	$elementor_version_recommendation = '3.3.0';
+	$elementor_version_recommendation = '3.5.0';
 	if ( ! version_compare( ELEMENTOR_VERSION, $elementor_version_recommendation, '>=' ) ) {
 		add_action( 'admin_notices', 'elementor_pro_admin_notice_upgrade_recommendation' );
 	}
@@ -83,6 +65,13 @@ function elementor_pro_load_plugin() {
 
 add_action( 'plugins_loaded', 'elementor_pro_load_plugin' );
 
+function print_error( $message ) {
+	if ( ! $message ) {
+		return;
+	}
+	// PHPCS - $message should not be escaped
+	echo '<div class="error">' . $message . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
 /**
  * Show in WP Dashboard notice about the plugin is not activated.
  *
@@ -105,8 +94,9 @@ function elementor_pro_fail_load() {
 
 		$activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . $plugin . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $plugin );
 
-		$message = '<p>' . __( 'Elementor Pro is not working because you need to activate the Elementor plugin.', 'elementor-pro' ) . '</p>';
-		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $activation_url, __( 'Activate Elementor Now', 'elementor-pro' ) ) . '</p>';
+		$message = '<h3>' . esc_html__( 'Activate the Elementor Plugin', 'elementor-pro' ) . '</h3>';
+		$message .= '<p>' . esc_html__( 'Before you can use all the features of Elementor Pro, you need to activate the Elementor plugin first.', 'elementor-pro' ) . '</p>';
+		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $activation_url, esc_html__( 'Activate Now', 'elementor-pro' ) ) . '</p>';
 	} else {
 		if ( ! current_user_can( 'install_plugins' ) ) {
 			return;
@@ -114,11 +104,12 @@ function elementor_pro_fail_load() {
 
 		$install_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
-		$message = '<p>' . __( 'Elementor Pro is not working because you need to install the Elementor plugin.', 'elementor-pro' ) . '</p>';
-		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, __( 'Install Elementor Now', 'elementor-pro' ) ) . '</p>';
+		$message = '<h3>' . esc_html__( 'Install and Activate the Elementor Plugin', 'elementor-pro' ) . '</h3>';
+		$message .= '<p>' . esc_html__( 'Before you can use all the features of Elementor Pro, you need to install and activate the Elementor plugin first.', 'elementor-pro' ) . '</p>';
+		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $install_url, esc_html__( 'Install Elementor', 'elementor-pro' ) ) . '</p>';
 	}
 
-	echo '<div class="error"><p>' . $message . '</p></div>';
+	print_error( $message );
 }
 
 function elementor_pro_fail_load_out_of_date() {
@@ -129,10 +120,10 @@ function elementor_pro_fail_load_out_of_date() {
 	$file_path = 'elementor/elementor.php';
 
 	$upgrade_link = wp_nonce_url( self_admin_url( 'update.php?action=upgrade-plugin&plugin=' ) . $file_path, 'upgrade-plugin_' . $file_path );
-	$message = '<p>' . __( 'Elementor Pro is not working because you are using an old version of Elementor.', 'elementor-pro' ) . '</p>';
-	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, __( 'Update Elementor Now', 'elementor-pro' ) ) . '</p>';
+	$message = '<p>' . esc_html__( 'Elementor Pro is not working because you are using an old version of Elementor.', 'elementor-pro' ) . '</p>';
+	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, esc_html__( 'Update Elementor Now', 'elementor-pro' ) ) . '</p>';
 
-	echo '<div class="error">' . $message . '</div>';
+	print_error( $message );
 }
 
 function elementor_pro_admin_notice_upgrade_recommendation() {
@@ -143,10 +134,10 @@ function elementor_pro_admin_notice_upgrade_recommendation() {
 	$file_path = 'elementor/elementor.php';
 
 	$upgrade_link = wp_nonce_url( self_admin_url( 'update.php?action=upgrade-plugin&plugin=' ) . $file_path, 'upgrade-plugin_' . $file_path );
-	$message = '<p>' . __( 'A new version of Elementor is available. For better performance and compatibility of Elementor Pro, we recommend updating to the latest version.', 'elementor-pro' ) . '</p>';
-	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, __( 'Update Elementor Now', 'elementor-pro' ) ) . '</p>';
+	$message = '<p>' . esc_html__( 'A new version of Elementor is available. For better performance and compatibility of Elementor Pro, we recommend updating to the latest version.', 'elementor-pro' ) . '</p>';
+	$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, esc_html__( 'Update Elementor Now', 'elementor-pro' ) ) . '</p>';
 
-	echo '<div class="error">' . $message . '</div>';
+	print_error( $message );
 }
 
 if ( ! function_exists( '_is_elementor_installed' ) ) {
