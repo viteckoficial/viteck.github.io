@@ -904,3 +904,428 @@
         "last_updated": null
     }
 }
+05-16-2022 @ 10:28:17 - [process_payment]: customer being redirected to Mercado Pago.
+05-16-2022 @ 10:28:17 - [Created preference: ]: Preference: {
+    "binary_mode": false,
+    "external_reference": "WC-Viteck562",
+    "notification_url": null,
+    "statement_descriptor": "Viteck Oficial - Mercado Pago",
+    "items": [
+        {
+            "id": 12,
+            "title": "Palo Alto x 1",
+            "description": "",
+            "picture_url": false,
+            "category_id": "tickets",
+            "quantity": 1,
+            "unit_price": 850,
+            "currency_id": "ARS"
+        }
+    ],
+    "payer": {
+        "name": "Ignacio",
+        "surname": "Barraza",
+        "email": "igba5504@gmail.com",
+        "phone": {
+            "number": "3462312957"
+        },
+        "address": {
+            "zip_code": "",
+            "street_name": " \/ venado tuerto  "
+        }
+    },
+    "back_urls": {
+        "success": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR",
+        "failure": "http:\/\/localhost\/viteckoficial\/index.php\/cart\/?cancel_order=true&order=wc_order_2pr9I0RbWdOAR&order_id=562&redirect&_wpnonce=f25808b36a",
+        "pending": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR"
+    },
+    "shipments": {
+        "receiver_address": {
+            "zip_code": "",
+            "street_name": "    ",
+            "apartment": "",
+            "city_name": "",
+            "state_name": ""
+        }
+    },
+    "payment_methods": {
+        "installments": 1,
+        "excluded_payment_methods": []
+    },
+    "auto_return": "approved",
+    "metadata": {
+        "platform": "bo2hnr2ic4p001kbgpt0",
+        "platform_version": "6.4.1",
+        "module_version": "5.7.6",
+        "site_id": "mla",
+        "sponsor_id": 208682286,
+        "collector": "229448598",
+        "test_mode": true,
+        "details": "",
+        "basic_settings": {
+            "enabled": "yes",
+            "currency_conversion": "yes",
+            "installments": "1",
+            "method": "redirect",
+            "auto_return": "yes",
+            "binary_mode": "no",
+            "ex_payments_cencosud": "yes",
+            "ex_payments_cordobesa": "yes",
+            "ex_payments_amex": "yes",
+            "ex_payments_naranja": "yes",
+            "ex_payments_diners": "yes",
+            "ex_payments_argencard": "yes",
+            "ex_payments_master": "yes",
+            "ex_payments_cabal": "yes",
+            "ex_payments_cmr": "yes",
+            "ex_payments_visa": "yes",
+            "ex_payments_tarshop": "yes",
+            "ex_payments_maestro": "yes",
+            "ex_payments_debvisa": "yes",
+            "ex_payments_debcabal": "yes",
+            "ex_payments_debmaster": "yes",
+            "ex_payments_rapipago": "yes",
+            "ex_payments_pagofacil": "yes",
+            "gateway_discount_checkbox": "no",
+            "commission_checkbox": "no",
+            "checkbox_checkout_test_mode": "yes",
+            "checkout_credential_prod": "deprecated"
+        },
+        "custom_settings": [],
+        "ticket_settings": [],
+        "pix_settings": [],
+        "seller_website": "http:\/\/localhost\/viteckoficial",
+        "billing_address": {
+            "zip_code": "",
+            "street_name": "",
+            "city_name": "venado tuerto",
+            "state_name": "",
+            "country_name": ""
+        },
+        "user": {
+            "registered_user": "yes",
+            "user_email": "viteckoficial@gmail.com",
+            "user_registration_date": "2022-04-12T19:24:57.000+00:00"
+        },
+        "checkout": "smart",
+        "checkout_type": "redirect"
+    }
+}
+05-16-2022 @ 10:28:18 - [create_preference]: Created Preference: {
+    "status": 201,
+    "response": {
+        "additional_info": "",
+        "auto_return": "approved",
+        "back_urls": {
+            "failure": "http:\/\/localhost\/viteckoficial\/index.php\/cart\/?cancel_order=true&order=wc_order_2pr9I0RbWdOAR&order_id=562&redirect&_wpnonce=f25808b36a",
+            "pending": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR",
+            "success": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR"
+        },
+        "binary_mode": false,
+        "client_id": "4521425341335221",
+        "collector_id": 229448598,
+        "coupon_code": null,
+        "coupon_labels": null,
+        "date_created": "2022-05-16T09:28:18.168-04:00",
+        "date_of_expiration": null,
+        "expiration_date_from": null,
+        "expiration_date_to": null,
+        "expires": false,
+        "external_reference": "WC-Viteck562",
+        "id": "229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "init_point": "https:\/\/www.mercadopago.com.ar\/checkout\/v1\/redirect?pref_id=229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "internal_metadata": null,
+        "items": [
+            {
+                "id": "12",
+                "category_id": "tickets",
+                "currency_id": "ARS",
+                "description": "",
+                "title": "Palo Alto x 1",
+                "quantity": 1,
+                "unit_price": 850
+            }
+        ],
+        "marketplace": "NONE",
+        "marketplace_fee": 0,
+        "metadata": {
+            "basic_settings": {
+                "auto_return": "yes",
+                "binary_mode": "no",
+                "checkbox_checkout_test_mode": "yes",
+                "checkout_credential_prod": "deprecated",
+                "commission_checkbox": "no",
+                "currency_conversion": "yes",
+                "enabled": "yes",
+                "ex_payments_amex": "yes",
+                "ex_payments_argencard": "yes",
+                "ex_payments_cabal": "yes",
+                "ex_payments_cencosud": "yes",
+                "ex_payments_cmr": "yes",
+                "ex_payments_cordobesa": "yes",
+                "ex_payments_debcabal": "yes",
+                "ex_payments_debmaster": "yes",
+                "ex_payments_debvisa": "yes",
+                "ex_payments_diners": "yes",
+                "ex_payments_maestro": "yes",
+                "ex_payments_master": "yes",
+                "ex_payments_naranja": "yes",
+                "ex_payments_pagofacil": "yes",
+                "ex_payments_rapipago": "yes",
+                "ex_payments_tarshop": "yes",
+                "ex_payments_visa": "yes",
+                "gateway_discount_checkbox": "no",
+                "installments": "1",
+                "method": "redirect"
+            },
+            "billing_address": {
+                "city_name": "venado tuerto",
+                "country_name": "",
+                "state_name": "",
+                "street_name": "",
+                "zip_code": ""
+            },
+            "checkout": "smart",
+            "checkout_type": "redirect",
+            "collector": "229448598",
+            "custom_settings": [],
+            "details": "",
+            "module_version": "5.7.6",
+            "pix_settings": [],
+            "platform": "bo2hnr2ic4p001kbgpt0",
+            "platform_version": "6.4.1",
+            "seller_website": "http:\/\/localhost\/viteckoficial",
+            "site_id": "mla",
+            "sponsor_id": 208682286,
+            "test_mode": true,
+            "ticket_settings": [],
+            "user": {
+                "registered_user": "yes",
+                "user_email": "viteckoficial@gmail.com",
+                "user_registration_date": "2022-04-12T19:24:57.000+00:00"
+            }
+        },
+        "notification_url": null,
+        "operation_type": "regular_payment",
+        "payer": {
+            "phone": {
+                "area_code": "",
+                "number": "3462312957"
+            },
+            "address": {
+                "zip_code": "",
+                "street_name": "  venado tuerto  ",
+                "street_number": null
+            },
+            "email": "igba5504@gmail.com",
+            "identification": {
+                "number": "",
+                "type": ""
+            },
+            "name": "Ignacio",
+            "surname": "Barraza",
+            "date_created": null,
+            "last_purchase": null
+        },
+        "payment_methods": {
+            "default_card_id": null,
+            "default_payment_method_id": null,
+            "excluded_payment_methods": [
+                {
+                    "id": ""
+                }
+            ],
+            "excluded_payment_types": [
+                {
+                    "id": ""
+                }
+            ],
+            "installments": 1,
+            "default_installments": null
+        },
+        "processing_modes": null,
+        "product_id": null,
+        "redirect_urls": {
+            "failure": "",
+            "pending": "",
+            "success": ""
+        },
+        "sandbox_init_point": "https:\/\/sandbox.mercadopago.com.ar\/checkout\/v1\/redirect?pref_id=229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "site_id": "MLA",
+        "shipments": {
+            "default_shipping_method": null,
+            "receiver_address": {
+                "zip_code": "",
+                "street_name": "    ",
+                "street_number": null,
+                "floor": "",
+                "apartment": "",
+                "city_name": "",
+                "state_name": "",
+                "country_name": null
+            }
+        },
+        "statement_descriptor": "Viteck Oficial - Mercado Pago",
+        "total_amount": null,
+        "last_updated": null
+    }
+}
+05-16-2022 @ 10:28:18 - [create_preference]: payment link generated with success from mercado pago, with structure as follow: {
+    "status": 201,
+    "response": {
+        "additional_info": "",
+        "auto_return": "approved",
+        "back_urls": {
+            "failure": "http:\/\/localhost\/viteckoficial\/index.php\/cart\/?cancel_order=true&order=wc_order_2pr9I0RbWdOAR&order_id=562&redirect&_wpnonce=f25808b36a",
+            "pending": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR",
+            "success": "http:\/\/localhost\/viteckoficial\/index.php\/checkout\/order-received\/562\/?key=wc_order_2pr9I0RbWdOAR"
+        },
+        "binary_mode": false,
+        "client_id": "4521425341335221",
+        "collector_id": 229448598,
+        "coupon_code": null,
+        "coupon_labels": null,
+        "date_created": "2022-05-16T09:28:18.168-04:00",
+        "date_of_expiration": null,
+        "expiration_date_from": null,
+        "expiration_date_to": null,
+        "expires": false,
+        "external_reference": "WC-Viteck562",
+        "id": "229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "init_point": "https:\/\/www.mercadopago.com.ar\/checkout\/v1\/redirect?pref_id=229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "internal_metadata": null,
+        "items": [
+            {
+                "id": "12",
+                "category_id": "tickets",
+                "currency_id": "ARS",
+                "description": "",
+                "title": "Palo Alto x 1",
+                "quantity": 1,
+                "unit_price": 850
+            }
+        ],
+        "marketplace": "NONE",
+        "marketplace_fee": 0,
+        "metadata": {
+            "basic_settings": {
+                "auto_return": "yes",
+                "binary_mode": "no",
+                "checkbox_checkout_test_mode": "yes",
+                "checkout_credential_prod": "deprecated",
+                "commission_checkbox": "no",
+                "currency_conversion": "yes",
+                "enabled": "yes",
+                "ex_payments_amex": "yes",
+                "ex_payments_argencard": "yes",
+                "ex_payments_cabal": "yes",
+                "ex_payments_cencosud": "yes",
+                "ex_payments_cmr": "yes",
+                "ex_payments_cordobesa": "yes",
+                "ex_payments_debcabal": "yes",
+                "ex_payments_debmaster": "yes",
+                "ex_payments_debvisa": "yes",
+                "ex_payments_diners": "yes",
+                "ex_payments_maestro": "yes",
+                "ex_payments_master": "yes",
+                "ex_payments_naranja": "yes",
+                "ex_payments_pagofacil": "yes",
+                "ex_payments_rapipago": "yes",
+                "ex_payments_tarshop": "yes",
+                "ex_payments_visa": "yes",
+                "gateway_discount_checkbox": "no",
+                "installments": "1",
+                "method": "redirect"
+            },
+            "billing_address": {
+                "city_name": "venado tuerto",
+                "country_name": "",
+                "state_name": "",
+                "street_name": "",
+                "zip_code": ""
+            },
+            "checkout": "smart",
+            "checkout_type": "redirect",
+            "collector": "229448598",
+            "custom_settings": [],
+            "details": "",
+            "module_version": "5.7.6",
+            "pix_settings": [],
+            "platform": "bo2hnr2ic4p001kbgpt0",
+            "platform_version": "6.4.1",
+            "seller_website": "http:\/\/localhost\/viteckoficial",
+            "site_id": "mla",
+            "sponsor_id": 208682286,
+            "test_mode": true,
+            "ticket_settings": [],
+            "user": {
+                "registered_user": "yes",
+                "user_email": "viteckoficial@gmail.com",
+                "user_registration_date": "2022-04-12T19:24:57.000+00:00"
+            }
+        },
+        "notification_url": null,
+        "operation_type": "regular_payment",
+        "payer": {
+            "phone": {
+                "area_code": "",
+                "number": "3462312957"
+            },
+            "address": {
+                "zip_code": "",
+                "street_name": "  venado tuerto  ",
+                "street_number": null
+            },
+            "email": "igba5504@gmail.com",
+            "identification": {
+                "number": "",
+                "type": ""
+            },
+            "name": "Ignacio",
+            "surname": "Barraza",
+            "date_created": null,
+            "last_purchase": null
+        },
+        "payment_methods": {
+            "default_card_id": null,
+            "default_payment_method_id": null,
+            "excluded_payment_methods": [
+                {
+                    "id": ""
+                }
+            ],
+            "excluded_payment_types": [
+                {
+                    "id": ""
+                }
+            ],
+            "installments": 1,
+            "default_installments": null
+        },
+        "processing_modes": null,
+        "product_id": null,
+        "redirect_urls": {
+            "failure": "",
+            "pending": "",
+            "success": ""
+        },
+        "sandbox_init_point": "https:\/\/sandbox.mercadopago.com.ar\/checkout\/v1\/redirect?pref_id=229448598-69972876-4b59-4ec4-b0b2-de8e6ca19685",
+        "site_id": "MLA",
+        "shipments": {
+            "default_shipping_method": null,
+            "receiver_address": {
+                "zip_code": "",
+                "street_name": "    ",
+                "street_number": null,
+                "floor": "",
+                "apartment": "",
+                "city_name": "",
+                "state_name": "",
+                "country_name": null
+            }
+        },
+        "statement_descriptor": "Viteck Oficial - Mercado Pago",
+        "total_amount": null,
+        "last_updated": null
+    }
+}
